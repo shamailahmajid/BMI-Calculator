@@ -23,4 +23,4 @@ else:
     print("Invalid unit. Please enter either 'm' or 'in'.")
     exit()
 bmi = weight / (height ** 2)
-print("Your BMI is", bmi)
+print("Your BMI is", round(bmi,2))
