@@ -1,0 +1,26 @@
+name = input("What is your name?\n")
+print("Hello,", name, "we will be calculating your BMI today.")
+weight = float(input("What is your weight?\n"))
+weight_unit = input("Is your weight in kilograms (kgs) or pounds (lbs)?\n")
+# Convert weight to kilograms if it's in pounds
+# 1 pound is approximately 0.453592 kilograms
+if weight_unit == "kgs" or weight_unit == "kilograms":
+    weight = weight
+elif weight_unit == "lbs":
+    weight = weight * 0.453592
+else:
+    print("Invalid unit. Please enter either 'kgs' or 'lbs'.")
+    exit()
+height = float(input("What is your height?\n"))
+height_unit = input("Is your height in meters (m) or inches (in)?\n")
+# Convert height to meters if it's in inches
+# 1 inch is approximately 0.0254 meters
+if height_unit == "m" or height_unit == "meters":
+    height = height
+elif height_unit == "in" or height_unit == "inches":
+    height = height * 0.0254
+else:
+    print("Invalid unit. Please enter either 'm' or 'in'.")
+    exit()
+bmi = weight / (height ** 2)
+print("Your BMI is", bmi)
